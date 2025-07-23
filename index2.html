@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVANT-GARDE CHRONICLES</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for dramatic typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for animations and fonts */
+        @keyframes fadeInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInFromBottom 1s ease-out forwards;
+            opacity: 0; /* Start invisible */
+        }
+
+        .animation-delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .animation-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .font-playfair-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Ensure smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-950 text-gray-100 font-inter antialiased">
+
+    <!-- Header -->
+    <header class="bg-black shadow-lg py-6 px-4 md:px-8 sticky top-0 z-50 border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-extrabold text-white font-playfair-display tracking-wider">
+                AVANT-GARDE CHRONICLES
+            </h1>
+            <ul class="hidden md:flex space-x-8 text-lg font-light">
+                <li><a href="#" class="hover:text-purple-400 transition duration-300">COLLECTIONS</a></li>
+                <li><a href="#" class="hover:text-purple-400 transition duration-300">EDITORIALS</a></li>
+                <li><a href="#" class="hover:text-purple-400 transition duration-300">DESIGNERS</a></li>
+                <li><a href="#" class="hover:text-purple-400 transition duration-300">ABOUT</a></li>
+            </ul>
+            <button class="md:hidden text-white text-2xl">
+                <!-- Hamburger Icon (simple SVG for demo) -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/1a1a1a/e0e0e0?text=Dramatic+Fashion+Statement'); background-attachment: fixed;">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 p-8 max-w-4xl mx-auto bg-gray-900 bg-opacity-70 rounded-xl shadow-2xl border border-gray-700">
+            <h2 class="text-6xl md:text-8xl font-playfair-display font-black text-white leading-tight mb-6 animate-fade-in-up">
+                Where Art Meets Fabric
+            </h2>
+            <p class="text-xl md:text-2xl font-light text-gray-300 mb-8 animate-fade-in-up animation-delay-300">
+                Unveiling the narratives woven into every stitch, inspired by the masters of disruptive elegance.
+            </p>
+            <button class="px-8 py-4 bg-purple-700 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-purple-800 transition duration-300 transform hover:scale-105 animate-fade-in-up animation-delay-600">
+                Explore Latest Collections
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Articles Section -->
+    <section class="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+        <h3 class="text-5xl font-playfair-display font-bold text-center text-white mb-16 border-b-2 border-purple-700 pb-4">
+            Featured Editorials
+        </h3>
+        <div id="blog-posts-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Blog post cards will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Newsletter Signup (Subtle Call to Action) -->
+    <section class="py-20 bg-gray-900 border-t border-b border-gray-800">
+        <div class="max-w-3xl mx-auto text-center px-4">
+            <h3 class="text-4xl font-playfair-display font-bold text-white mb-6">
+                Join the Inner Circle
+            </h3>
+            <p class="text-lg text-gray-300 mb-8">
+                Receive exclusive insights, early access to collections, and behind-the-scenes stories.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    class="px-6 py-3 w-full sm:w-80 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600"
+                />
+                <button class="px-8 py-3 bg-purple-700 text-white font-semibold rounded-full shadow-md hover:bg-purple-800 transition duration-300">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 px-4 md:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Avant-Garde Chronicles. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+                <a href="#" class="hover:text-white transition duration-300">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn"
+        class="fixed bottom-8 right-8 bg-purple-700 text-white p-4 rounded-full shadow-lg hover:bg-purple-800 transition duration-300 transform hover:scale-110 z-50 hidden"
+        aria-label="Scroll to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script>
+        // JavaScript for dynamic features
+
+        // Blog Post Data
+        const blogPosts = [
+            {
+                title: "The Unseen Threads: Deconstructing McQueen's Legacy",
+                image: "https://placehold.co/600x400/333333/ffffff?text=McQueen+Legacy",
+                excerpt: "Dive deep into the intricate world of Alexander McQueen, exploring the dark romance and rebellious spirit that defined his iconic collections. His work often challenged conventional beauty standards, blending historical references with futuristic visions. From his early controversial shows to his final masterpieces, McQueen's influence on fashion and art remains unparalleled. This editorial dissects the key themes, techniques, and emotional depth present in his most memorable creations, revealing the genius behind the garments. It's a journey through a visionary's mind, where every stitch tells a story of passion, rebellion, and unparalleled craftsmanship.",
+                date: "July 22, 2025"
+            },
+            {
+                title: "Sculptural Silhouettes: Fashion as Wearable Art",
+                image: "https://placehold.co/600x400/444444/ffffff?text=Sculptural+Fashion",
+                excerpt: "From avant-garde runway pieces to architectural garments, discover how designers push the boundaries of fashion as a sculptural medium. This exploration delves into the works of designers who treat fabric as clay, molding and shaping it into three-dimensional forms that defy traditional clothing. We examine the techniques used to create dramatic volumes, sharp angles, and flowing lines that transform the human body into a moving sculpture. The article highlights iconic pieces that blur the lines between fashion, art, and architecture, showcasing how clothing can transcend mere utility to become a profound artistic statement.",
+                date: "July 18, 2025"
+            },
+            {
+                title: "The Dark Allure: Gothic Influences in Modern Couture",
+                image: "https://placehold.co/600x400/555555/ffffff?text=Gothic+Couture",
+                excerpt: "Explore the enduring fascination with gothic aesthetics in high fashion, from dramatic capes to intricate lace and shadowy palettes. This piece traces the evolution of gothic elements from historical romanticism to contemporary runway shows, identifying how designers incorporate themes of mystery, rebellion, and dark beauty. We look at the use of rich textures, intricate embellishments, and dramatic silhouettes that evoke a sense of timeless elegance and brooding romance. The article showcases how the gothic influence continues to inspire avant-garde collections, proving its powerful and lasting impact on the world of haute couture.",
+                date: "July 15, 2025"
+            }
+        ];
+
+        // Function to create a blog post card HTML
+        function createBlogPostCard(post) {
+            const card = document.createElement('div');
+            card.className = 'bg-gray-900 rounded-xl shadow-xl overflow-hidden border border-gray-800 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl';
+
+            const shortExcerpt = post.excerpt.substring(0, 150) + '...';
+            const fullExcerpt = post.excerpt;
+
+            card.innerHTML = `
+                <img
+                    src="${post.image}"
+                    alt="${post.title}"
+                    class="w-full h-64 object-cover object-center border-b border-gray-800"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/222222/cccccc?text=Image+Not+Found';"
+                />
+                <div class="p-6">
+                    <h4 class="text-3xl font-playfair-display font-bold text-white mb-3 leading-snug">
+                        ${post.title}
+                    </h4>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Published on ${post.date}
+                    </p>
+                    <p class="text-gray-300 text-base mb-4 blog-excerpt">
+                        ${shortExcerpt}
+                    </p>
+                    <button class="text-purple-400 hover:text-purple-300 font-semibold text-sm transition duration-300 read-more-btn">
+                        Read More
+                    </button>
+                </div>
+            `;
+
+            const readMoreBtn = card.querySelector('.read-more-btn');
+            const excerptParagraph = card.querySelector('.blog-excerpt');
+            let isExpanded = false;
+
+            readMoreBtn.addEventListener('click', () => {
+                isExpanded = !isExpanded;
+                if (isExpanded) {
+                    excerptParagraph.textContent = fullExcerpt;
+                    readMoreBtn.textContent = 'Read Less';
+                } else {
+                    excerptParagraph.textContent = shortExcerpt;
+                    readMoreBtn.textContent = 'Read More';
+                }
+            });
+
+            return card;
+        }
+
+        // Populate blog posts on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('blog-posts-container');
+            blogPosts.forEach(post => {
+                container.appendChild(createBlogPostCard(post));
+            });
+
+            // Scroll to Top Button Logic
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.remove('hidden');
+                } else {
+                    scrollTopBtn.classList.add('hidden');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
